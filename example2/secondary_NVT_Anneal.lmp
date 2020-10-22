@@ -1,0 +1,88 @@
+variable seed equal 765372
+variable rn equal round(random(1,100000,${seed})) ## random number for MC evaluation   (x,y,z) = (lo,hi,seed)
+
+units           real
+atom_style     molecular
+boundary	   s s s  
+read_data /home/jsp/20201010_Bigwind/Secondary/anneal/anneal045/Anneal_5.data
+
+neighbor		4 nsq
+neigh_modify	every 10 delay 10  check yes one 10000
+include         all_data.in #withou_Dihe.in
+special_bonds lj 0 0 0
+
+include first_atom.in
+include second_atom.in
+variable R0 equal 9
+variable restrainloop loop 2270 ###***
+variable restrainNo equal 2270 ###***
+
+thermo_style custom step temp evdwl etotal ebond eangle edihed fnorm
+thermo 500
+
+#####################
+label restrain
+
+#print "${start} ${end}"
+fix restrain_${restrainloop} all restrain bond ${start} ${end} 0.5 0.5 ${R0}
+fix_modify restrain_${restrainloop} energy yes
+
+next start
+next end
+next restrainloop
+jump SELF restrain
+
+#########################
+#comm_modify cutoff 20000
+comm_style tiled 
+variable restrainE equal (pe-evdwl-ebond-eangle-edihed)/v_restrainNo
+# bonds,angles,dihedrals
+variable avebondE equal ebond/bonds
+variable aveangE equal eangle/angles
+variable avediehE equal edihed/dihedrals
+
+fix balance all balance 1000 1.1 rcb
+min_modify dmax 0.2
+thermo_style custom step temp evdwl v_avebondE v_aveangE v_avediehE pe v_restrainE fmax
+thermo 100
+#min_style cg
+#minimize 0 0 100 100
+#write_data Initial_Opt4Anneal.data nocoeff
+
+timestep 2.95245
+run_style respa 4 5 2 2 bond 1 angle 2 dihedral 3 
+#fix 1 all nve
+##fix 2 all langevin 300. 300. 100 24601
+#fix 2 all temp/rescale 1 300. 300. 5. 0.9
+#run 5000
+#unfix 1
+#unfix 2
+#write_data Initial_NVT.data nocoeff
+
+#shell mkdir anneal # use perl to do this
+shell cd anneal
+
+variable Dihe loop 10
+
+label loop2
+#min_modify dmax 0.2
+#min_style cg
+#minimize 0 0 1000 1000
+#min_style fire
+#minimize 0 0 3000 3000
+variable lmp_seed equal round(random(1,1000000,v_rn))
+print "loop: ${Dihe}, lmp_seed: ${lmp_seed}"
+##timestep  1
+velocity all create 400. ${lmp_seed} rot yes dist gaussian 
+fix 1 all nve
+#fix 2 all langevin 500.0 300.0 100 ${lmp_seed}
+fix 2 all temp/rescale 1 400. 300. 3. 1.0
+#run 8000  every 2000 
+#dump 1 all custom 500 Anneal_*.cfg id type x y z
+run 5000 #every 3000 "write_data NVT_${Dihe}.data nocoeff"
+unfix 1
+unfix 2
+#undump 1
+write_data Anneal_${Dihe}.data nocoeff
+next Dihe
+jump SELF loop2

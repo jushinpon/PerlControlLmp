@@ -1,0 +1,113 @@
+starting for rerun anneal_loop counting
+*****Restart job for 1 times
+Current Random number seed: 1129472
+*****Restart job for 2 times
+Current Random number seed: 285383
+*****Restart job for 3 times
+Current Random number seed: 1096785
+original timestep: 5 for loop 3
+adjusted timestep: 4.5 for loop 3
+*****Restart job for 3 times
+Current Random number seed: 310625
+*****Restart job for 4 times
+Current Random number seed: 1231826
+*****Restart job for 5 times
+Current Random number seed: 473558
+*****Restart job for 6 times
+Current Random number seed: 1132071
+*****Restart job for 7 times
+Current Random number seed: 230262
+*****Restart job for 8 times
+Current Random number seed: 650098
+*****Restart job for 9 times
+Current Random number seed: 283234
+original timestep: 4.5 for loop 9
+adjusted timestep: 4.05 for loop 9
+*****Restart job for 9 times
+Current Random number seed: 121723
+*****Restart job for 10 times
+Current Random number seed: 99018
+*****Restart job for 11 times
+Current Random number seed: 230796
+*****Restart job for 12 times
+Current Random number seed: 275713
+*****Restart job for 13 times
+Current Random number seed: 250030
+*****Restart job for 14 times
+Current Random number seed: 126620
+*****Restart job for 15 times
+Current Random number seed: 1072472
+*****Restart job for 16 times
+Current Random number seed: 922936
+*****Restart job for 17 times
+Current Random number seed: 1138529
+*****Restart job for 18 times
+Current Random number seed: 713403
+*****Restart job for 19 times
+Current Random number seed: 1080654
+*****Restart job for 20 times
+Current Random number seed: 421790
+original timestep: 4.05 for loop 20
+adjusted timestep: 3.645 for loop 20
+*****Restart job for 20 times
+Current Random number seed: 1111212
+*****Restart job for 21 times
+Current Random number seed: 1175011
+*****Restart job for 22 times
+Current Random number seed: 404096
+*****Restart job for 23 times
+Current Random number seed: 622236
+*****Restart job for 24 times
+Current Random number seed: 469894
+*****Restart job for 25 times
+Current Random number seed: 352621
+*****Restart job for 26 times
+Current Random number seed: 641867
+*****Restart job for 27 times
+Current Random number seed: 53430
+original timestep: 3.645 for loop 27
+adjusted timestep: 3.2805 for loop 27
+*****Restart job for 27 times
+Current Random number seed: 916542
+*****Restart job for 28 times
+Current Random number seed: 1115641
+*****Restart job for 29 times
+Current Random number seed: 158501
+*****Restart job for 30 times
+Current Random number seed: 933796
+*****Restart job for 31 times
+Current Random number seed: 824988
+*****Restart job for 32 times
+Current Random number seed: 120494
+*****Restart job for 33 times
+Current Random number seed: 518222
+*****Restart job for 34 times
+Current Random number seed: 605416
+original timestep: 3.2805 for loop 34
+adjusted timestep: 2.95245 for loop 34
+*****Restart job for 34 times
+Current Random number seed: 1208637
+*****Restart job for 35 times
+Current Random number seed: 591184
+*****Restart job for 36 times
+Current Random number seed: 716721
+*****Restart job for 37 times
+Current Random number seed: 54376
+*****Restart job for 38 times
+Current Random number seed: 761566
+*****Restart job for 39 times
+Current Random number seed: 653645
+*****Restart job for 40 times
+Current Random number seed: 43766
+*****Restart job for 41 times
+Current Random number seed: 668396
+*****Restart job for 42 times
+Current Random number seed: 67466
+*****Restart job for 43 times
+Current Random number seed: 798285
+*****Restart job for 44 times
+Current Random number seed: 210148
+*****Restart job for 45 times
+Current Random number seed: 971814
+*****Restart job for 46 times
+Current Random number seed: 765372

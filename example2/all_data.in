@@ -1,0 +1,154 @@
+ # potential information
+mass 1 94.970 # P
+mass 2 97.054 # S
+mass 3 53.022 # CG
+mass 4 42.030 # N6
+mass 5 54.030 # N2
+mass 6 43.014 # O6
+mass 7 42.006 # O2
+mass 8 26.016 # CU
+mass 9 39.015 # CA
+
+bond_style harmonic
+
+bond_coeff   1   11.12  3.85    # P-S type:(1-2)
+bond_coeff   2   9.79   3.74   # S-CG type:(2-3)
+bond_coeff   3   10.89  3.61    # S-CU type:(2-8)
+bond_coeff   4   87.7   4.29   # CG-N6 type:(3-4)
+bond_coeff   5   51.66  5.66    # CG-N2 type:(3-5)
+bond_coeff   6   44.60  4.28    # CG-O6 type:(3-6)
+bond_coeff   7   109.19 4.33     # CG-CA type:(3-9)
+bond_coeff   8   44.00  4.55    # N6-O2 type:(4-7)
+bond_coeff   9   124.29 3.59     # N6-CU type:(4-8)
+bond_coeff   10  93.79  3.53    # N6-CA type:(4-9)
+bond_coeff   11  37.14  4.57    # N2-O6 type:(5-6)
+bond_coeff   12  57.10  4.53    # O6-O2 type:(6-7)
+bond_coeff   13  89.85  3.55    # O6-CU type:(6-8)
+bond_coeff   14  82.87  3.52    # O2-CU type:(7-8)
+#bond_coeff   15  8   3.046    # H_Bond N6-O6 Base A-U
+#bond_coeff   16  8   3.6176    # H_Bond CA-O2 Base A-U
+#bond_coeff   17  8   3.0427    # H_Bond N6-O6 Base C-G
+#bond_coeff   18  8   2.7974    # H_Bond N2-O2 Base C-G
+#bond_coeff   19  8   3.3427    # H_Bond O6-O6 Base C-G
+#bond_coeff   20  8   2.7974    # H_Bond N2-O2 Base C-G
+
+angle_style harmonic
+
+angle_coeff   1    1.356   102.78     # P-S-P type:(1-2-1)          
+angle_coeff   2   5.271   101.75      # P-S-CG type:(1-2-3)       
+angle_coeff   3   1.864    75.89 	  # P-S-CG type:(1-2-3p)
+angle_coeff   4   1.864    75.89 	  # P-S-CG type:(1p-2-3)
+angle_coeff   5    9.115    100.79    # P-S-CU type:(1-2-8)
+angle_coeff   6    2.386    74.40     # P-S-CU type:(1-2-8p)
+angle_coeff   7    2.386    74.40     # P-S-CU type:(1-2-8p)
+angle_coeff   8      2.040    106.18  # S-CG-CA type:(2-3-9)
+angle_coeff   9      7.130    154.72  # CG-N6-CA type:(3-4-9)
+angle_coeff   10    12.734    104.12  # N6-CA-CG type:(4-9-3)
+angle_coeff   11    8.162    153.94   # N6-CG-CA type:(4-3-9)
+angle_coeff   12    10.611    108.78  # S-CU-N6 type:(2-8-4)
+angle_coeff   13    6.794    163.79   # S-CU-O2 type:(2-8-7)
+angle_coeff   14    6.794    163.79   # O2-N6-CU type:(7-4-8)
+angle_coeff   15    15.930    88.99   # N6-O2-CU type:(4-7-8)
+angle_coeff   16    35.882    66.45   # N6-CU-O2 type:(4-8-7)
+angle_coeff   17    21.701    48.06   # S-CG-O6 type:(2-3-6)
+angle_coeff   18    50.065    52.57   # S-CG-N2 type:(2-3-5)
+angle_coeff   19    29.033    50.84   # CG-O6-N2 type:(3-6-5)
+angle_coeff   20    49.428    48.33   # CG-N2-O6 type:(3-5-6)
+angle_coeff   21    29.398    79.78   # N2-CG-O6 type:(5-3-6)
+angle_coeff   22    31.109    79.46   # S-CU-O6 type:(2-8-6)
+angle_coeff   23    30.600    49.98   # O2-O6-CU type:(7-6-8)
+angle_coeff   24     24.490    49.44  # O6-O2-CU type:(6-7-8)
+angle_coeff   25     17.290    65.22  # O6-CU-O2 type:(6-8-7)
+angle_coeff   26     16.156    79.38  # O6-O2-CU type:(3-5-6)
+angle_coeff   27    38.613    50.54   # O6-CU-O2 type:(8-7-6)
+#
+dihedral_style fourier
+#
+dihedral_coeff 1 3 2.964 1 15 -0.099 2 180 -0.247 3 15 # P-S-CG-N6 type:(1-2-3-4)X 
+dihedral_coeff 2 3 3.354 1 120 -0.606 2 180 -0.068 3 120 # P-S-CG-N6 type:(1'-2-3-4) X
+dihedral_coeff 3 3 3.354 1 120 -0.606 2 180 -0.068 3 120 # P-S-CG-N6 type:(1'-2-3-4) X
+dihedral_coeff 4 3 3.299 1 15 0.634 2 180 -0.204 3 15 # P-S-CG-CA type:(1-2-3-9) X
+dihedral_coeff 5 3 3.801 1 120 0.383 2 180 -0.287 3 120 # P-S-CG-CA type:(1'-2-3-9) X
+dihedral_coeff 6 3 3.801 1 120 0.383 2 180 -0.287 3 120 # P-S-CG-CA type:(1'-2-3-9) X
+dihedral_coeff 7 3 3.768 1 0 0.52 2 180 0.581 3 0 # P-S-CG-N2 type:(1-2-3-5) X
+dihedral_coeff 8 3 3.603 1 120 1.167 2 180 -0.325 3 120 # P-S-CG-N2 type:(1'-2-3-5) X
+dihedral_coeff 9 3 3.603 1 120 1.167 2 180 -0.325 3 120 # P-S-CG-N2 type:(1'-2-3-5) X
+dihedral_coeff 10 3 3.077 1 30 0.306 2 180 0.246 3 30 # P-S-CG-O6 type:(1-2-3-6) X
+dihedral_coeff 11 3 3.409 1 120 -0.265 2 180 -0.226 3 120 # P-S-CG-O6 type:(1'-2-3-6) X
+dihedral_coeff 12 3 3.409 1 120 -0.265 2 180 -0.226 3 120 # P-S-CG-O6 type:(1'-2-3-6) X
+dihedral_coeff 13 3 3.321 1 30 1.121 2 180 -0.156 3 30 # P-S-CU-N6 type:(1-2-8-4) X
+dihedral_coeff 14 3 3.461 1 120 -0.617 2 180 0.294 3 120 # P-S-CU-N6 type:(1'-2-8-4) X
+dihedral_coeff 15 3 3.461 1 120 -0.617 2 180 0.294 3 120 # P-S-CU-N6 type:(1'-2-8-4) X
+dihedral_coeff 16 3 2.51 1 30 0.518 2 180 -0.17 3 30 # P-S-CU-O6 type:(1-2-8-6) X
+dihedral_coeff 17 3 2.737 1 120 -0.666 2 180 0.148 3 120 # P-S-CU-O6 type:(1'-2-8-6) X
+dihedral_coeff 18 3 2.737 1 120 -0.666 2 180 0.148 3 120 # P-S-CU-O6 type:(1'-2-8-6) X
+dihedral_coeff 19 3 3.844 1 0 0.567 2 180 0.534 3 0 # P-S-CU-O2 type:(1-2-8-7) X
+dihedral_coeff 20 3 3.304 1 120 1.349 2 180 -0.342 3 120 # P-S-CU-O2 type:(1'-2-8-7) X
+dihedral_coeff 21 3 3.304 1 120 1.349 2 180 -0.342 3 120 # P-S-CU-O2 type:(1'-2-8-7) X
+dihedral_coeff 22 3 1.358 1 0 0.944 2 180 0.574 3 0 # P-S-P-S type:(1-2-1-2) 
+dihedral_coeff 23 3 1.387 1 120 0.898 2 180 -0.516 3 120 # S-P-S-CG type:(2-1-2-3) X
+dihedral_coeff 24 3 -1.661 1 60 0.455 2 180 0.311 3 60 # S-P-S-CG type:(2'-1-2-3) X
+dihedral_coeff 25 3 -1.661 1 60 0.455 2 180 0.311 3 60 # S-P-S-CG type:(2'-1-2-3) X
+dihedral_coeff 26 3 1.38 1 135 0.908 2 180 -0.691 3 135 # S-P-S-CU type:(2-1-2-8) 
+dihedral_coeff 27 3 -1.531 1 45 0.489 2 180 0.686 3 45 # S-P-S-CU type:(2'-1-2-8)
+dihedral_coeff 28 3 -1.531 1 45 0.489 2 180 0.686 3 45 # S-P-S-CU type:(2'-1-2-8)
+dihedral_coeff 29 3 -1.626 1 135 -0.113 2 180 -0.246 3 135 # S-P-S-P type:(2-1-2-1) 
+dihedral_coeff 30 3 7.114 1 150 -2.4 2 180 0.516 3 150 # S-CG-N6-CA type:(2-3-4-9) 
+dihedral_coeff 31 3 -3.328 1 120 0.95 2 180 0.101 3 120 # S-CG-N2-O6 type:(2-3-5-6) 
+dihedral_coeff 32 3 5.639 1 150 -2.063 2 180 -0.009 3 150 # S-CG-O6-N2 type:(2-3-6-5) 
+dihedral_coeff 33 3 2.959 1 15 -1.022 2 180 0.666 3 15 # S-CG-CA-N6 type:(2-3-9-4) 
+dihedral_coeff 34 3 5.024 1 165 -1.509 2 180 -1.807 3 165 # S-CU-N6-O2 type:(2-8-4-7) 
+dihedral_coeff 35 3 4.756 1 165 -1.037 2 180 -1.455 3 165 # S-CU-O6-O2 type:(2-8-6-7) 
+dihedral_coeff 36 3 -4.072 1 150 0.544 2 180 -0.144 3 150 # S-CU-O2-N6 type:(2-8-7-4)# 
+dihedral_coeff 37 3 3.51 1 0 0.425 2 180 0.457 3 0 # S-CU-O2-O6 type:(2-8-7-6) 
+
+
+#pair_style lj/cut/gpu 20
+#pair_coeff  * * 3 13
+
+
+#variable prefactor equal ramp(90,95)
+#pair_style soft/gpu 18
+#pair_coeff  * * 1 
+#fix 8 all adapt 1 pair soft/gpu a * * v_prefactor 
+
+
+pair_style   mm3/switch3 30 0.1 #lj/cut 16 #/coulgauss/long
+pair_coeff  * * 0.0 3 0 #2 3 0
+pair_coeff 1 1     0.1503 5.63858 0
+pair_coeff 1 2     0.054  4.71435  0
+pair_coeff 2 2     0.4162 6.0774 0
+pair_coeff 2 3   0.5856   2.8075  0
+pair_coeff 2 9     0.054  4.71435  0
+pair_coeff 2 8     0.5856 2.8075  0
+pair_coeff 3 3    0.9276  2.0918  0
+pair_coeff 3 4    0.3818  2.6079  0
+pair_coeff 3 5    0.8527  2.1671  0
+pair_coeff 3 6  0.6972    2.63      0 
+pair_coeff 3 7    0.8886  1.8088  0
+pair_coeff 3 8    0.9276  2.0918  0
+pair_coeff 4 4    1.4312  1.7302  0
+pair_coeff 4 5    1.0547  2.6916  0
+pair_coeff 4 6     1.8562 1.52135  0
+pair_coeff 4 7     0.7942 2.82385  0
+pair_coeff 4 8    0.3818  2.6079  0
+pair_coeff 4 9    0.3818  2.6079  0
+pair_coeff 5 5    1.1603  2.3964  0
+pair_coeff 5 6    0.5273  2.7811  0
+pair_coeff 5 7    2.0524  1.3987  0
+pair_coeff 5 8    0.8527  2.1671  0
+pair_coeff 5 9    0.8527  2.1671  0
+pair_coeff 6 6    1.4635  1.8892  0
+pair_coeff 6 7     1.2972 2.71605  0
+pair_coeff 6 8   0.6972   2.63      0
+pair_coeff 6 9   0.6972   2.63      0
+pair_coeff 7 7    1.0846  2.4307  0
+pair_coeff 7 8    0.8886  1.8088  0
+pair_coeff 7 9    0.8886  1.8088  0
+pair_coeff 8 8     0.927  2.0918  0#c-c
+pair_coeff 8 9     0.927  2.0918  0
+pair_coeff 9 9     0.927  2.0918  0
+
+
+
+
